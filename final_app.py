@@ -60,7 +60,7 @@ def video_comments(youtube, video_id, next_view_token):
 
 def get_comments_data(v_link):
     global all_comments, comments_time
-    api_key = 'AIzaSyBqXhg_t2zDm7gzodqnNVk9TXwY2dtmwDw'
+    api_key = YOUTUBEAPIKEY
     all_comments = []
     comments_time = []
     years = []
