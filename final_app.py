@@ -68,7 +68,7 @@ def get_comments_data(v_link):
     months = []
 
     # build a youtube object using our api key
-    yt_object = build('youtube', 'v3', developerKey=api_key)
+    yt_object = build('youtube', 'v3', developerKey=st.secrets["api_key"])
     video_id = get_video_id(video_link)
     # get all comments and replies
     comments = video_comments(yt_object, video_id, '')
