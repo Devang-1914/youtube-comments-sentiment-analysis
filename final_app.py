@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import nltk
+import os
 
 nltk.downloader.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -60,7 +61,7 @@ def video_comments(youtube, video_id, next_view_token):
 
 def get_comments_data(v_link):
     global all_comments, comments_time
-    api_key = YOUTUBEAPIKEY
+    os.environ["api_key"] == st.secrets["api_key"]
     all_comments = []
     comments_time = []
     years = []
